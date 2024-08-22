@@ -12,15 +12,15 @@ class Book{
     public function getAvailableCopies(){
         return $this->availableCopies;
     }
-    public function borrowBook($borrowBook){
-        if($this->availableCopies>=$borrowBook){
-            $this->availableCopies-=$borrowBook;
+    public function borrowBook($borrowBooks){
+        if($this->availableCopies>=$borrowBooks){
+            $this->availableCopies-=$borrowBooks;
         }
         return $this->availableCopies;
 
     }
-    public function returnBook($returnBook){
-        $this->availableCopies+=$returnBook;
+    public function returnBook($returnBooks){
+        $this->availableCopies+=$returnBooks;
         return $this->availableCopies;
 
     }
